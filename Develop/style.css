@@ -3,6 +3,10 @@ body {
   font-size: 16px;
 }
 
+.p-5, mb-4 {
+  text-align: center;
+}
+
 textarea {
   background: transparent;
   border: none;
