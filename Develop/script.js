@@ -1,4 +1,15 @@
 
+// updates time on the webpage
+function updateTime() {
+  var today = moment();
+
+  // updates the time element in the header
+  $("#currentDay").text(today.format("dddd, MMMM Do YYYY, h:mm.ss"));
+
+  
+}
+
+
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
