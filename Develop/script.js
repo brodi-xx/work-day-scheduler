@@ -1,14 +1,38 @@
-
-// updates time on the webpage
-function updateTime() {
-  var today = moment();
-
-  // updates the time element in the header
-  $("#currentDay").text(today.format("dddd, MMMM Do YYYY, h:mm.ss"));
-
+$(document).ready(function () {
+    // Gets the current date and time using day.js
+    var currentHour = dayjs().format("H");
+    var currentDay = dayjs().format("dddd, MMMM D YYYY");
+    $("#currentDay").text(currentDay);
   
-}
-
+    // Apply the past, present, or future class to the hours by comparing the ID to the current hour
+    $(".time-block").each(function() {
+      var id = $(this).attr("id");
+      var hour = id.split("-")[1];
+  
+      if (hour < currentHour) {
+        $(this).addClass("past");
+      } else if (hour === currentHour) {
+        $(this).addClass("present");
+      } else {
+        $(this).addClass("future");
+      }
+    });
+  
+    // Add a listener for click events on the save button and save user input to local storage
+    $(".saveBtn").on("click", function() {
+      var id = $(this).closest(".time-block").attr("id");
+      var text = $(this).siblings(".description").val();
+      localStorage.setItem(id, text);
+    });
+  
+    // Get any user input that was saved in localStorage and set the values of the corresponding text area elements
+    $(".time-block").each(function() {
+      var id = $(this).attr("id");
+      var text = localStorage.getItem(id);
+      $(this).children(".description").val(text);
+    });
+  });
+  
 
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
@@ -33,4 +57,3 @@ function updateTime() {
   //
   // TODO: Add code to display the current date in the header of the page.
 });*/
-
