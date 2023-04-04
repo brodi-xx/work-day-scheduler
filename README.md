@@ -19,4 +19,4 @@ SO THAT I can manage my time effectively
 The following animation demonstrates the application functionality:
 
 
-<img source = "https://raw.githubusercontent.com/brodi-xx/work-day-scheduler/main/Assets/05-third-party-apis-homework-demo.gif">
+<img source = "https://github.com/brodi-xx/work-day-scheduler/blob/main/Assets/Screen%20Shot%202023-04-04%20at%203.11.42%20PM.png?raw=true">
