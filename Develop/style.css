@@ -1,63 +1,52 @@
 body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-}
-
-.p-5, mb-4 {
-  text-align: center;
-}
-
-textarea {
-  background: transparent;
-  border: none;
-  resize: none;
-  color: #000000;
-  border-left: 1px solid black;
-  padding: 10px;
-}
-
-.description {
-  white-space: pre-wrap;
-}
-
-.time-block {
-  border-radius: 15px;
-}
-
-.row {
-  border-top: 1px solid white;
-}
-
-.hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
-}
-
-.past {
-  background-color: #d3d3d3;
+  font-family: "Fira Sans", sans-serif;
+  }
+  
+  header {
+  background-color: #0077b6;
   color: white;
-}
-
-.present {
-  background-color: #ff6961;
+  }
+  
+  .time-block {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  }
+  
+  .hour {
+  background-color: #FFD166;
+  font-weight: bold;
+  }
+  
+  .description {
+  background-color: #FFFFFF;
+  border: 1px solid #CED4DA;
+  }
+  
+  .past .description {
+  background-color: #E8E8E8;
+  }
+  
+  .present .description {
+  background-color: #FF6961;
+  }
+  
+  .future .description {
+  background-color: #77DD77;
+  }
+  
+  .saveBtn {
+  background-color: #0077b6;
   color: white;
-}
-
-.future {
-  background-color: #77dd77;
+  }
+  
+  .saveBtn:hover {
+  background-color: #023e8a;
   color: white;
-}
-
-.saveBtn {
-  border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #06aed5;
-  color: white;
-}
-
-.saveBtn i:hover {
-  font-size: 20px;
-  transition: all 0.3s ease-in-out;
-}
+  }
+  
+  
+  
+  
+  
+  
