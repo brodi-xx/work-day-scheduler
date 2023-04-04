@@ -17,7 +17,13 @@ $(".time-block").each(function() {
 });
 
 // Gets the current date and time using day.js
-$("#currentDay").text(now.format("dddd, MMMM D, YYYY, h:mm A"));
+function updateClock() {
+  const now = dayjs();
+  $("#currentDay").text(now.format("dddd, MMMM D, YYYY, h:mm A"));
+}
+
+// Call updateClock every second
+setInterval(updateClock, 1000);
 
 // Update the time-block classes every minute
 setInterval(function() {
