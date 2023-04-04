@@ -22,7 +22,7 @@ function updateClock() {
   $("#currentDay").text(now.format("dddd, MMMM D, YYYY, h:mm A"));
 }
 
-// Call updateClock every second
+// updateClock refreshes every second
 setInterval(updateClock, 1000);
 
 // Update the time-block classes every minute
